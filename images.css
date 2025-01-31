@@ -1,0 +1,614 @@
+/* General styling */
+*{
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Raleway",sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), 
+    url(2024/Quorum\,\ 30\ x\ 30_\,\ pastel\,\ acrylic\ and\ Screen\ Printing\ on\ Canvas.jpg.jpg);
+    min-height: 20vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+  }
+  
+ /* Basic styling reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hamburger Menu Styling */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color:  #0bdab4;
+  transition: transform 0.3s ease;
+}
+
+/* Hidden Menu */
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+  color: white;
+  z-index: 999;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  margin: 20px 0;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 300;
+  transition: color 0.3s;
+  font-family: "Raleway",sans-serif;
+}
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjusts the underline position slightly below the text */
+  width: 0; /* Start with no width to create slide effect */
+  height: 2px; /* Thickness of the underline */
+  background-color: #f8f1f1; /* Underline color */
+  transition: width 0.3s ease; /* Smooth transition for the slide effect */
+}
+
+/* Hover effect for the underline animation */
+.menu a:hover::after {
+  width: 100%; /* Expand underline to full width on hover */
+}
+
+.menu a:hover {
+  color: #0bdab4; /* Highlight color on hover */
+}
+
+/* Show menu when active */
+.menu.active {
+  display: block;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Gallery Styling */
+.gallery-container {
+  padding: 20px;
+  margin-top: 60px; /* Space for the fixed hamburger */
+}
+
+
+
+  .gallery-container {
+    width: 100vw;
+    max-width: 1200px;
+    margin: auto;
+    box-sizing: border-box;
+    padding-top: 40px;
+    
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 4fr));
+    gap: 10px;
+  }
+  
+  /* Gallery item and image styling */
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+
+  
+  .gallery-item img {
+    width: 100%;
+    height: 200px; /* Fixed height for uniform appearance */
+    object-fit: cover; /* Crops images to fit within the area */
+    border-radius: 8px;
+    transition: transform 0.3s, filter 0.3s;
+  }
+  
+  /* Hover effect for the overlay */
+  .gallery-item:hover img {
+    transform: scale(1.05);
+    filter: blur(2px);
+  }
+  
+  /* Overlay for title and button */
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .overlay p {
+    font-family: "Raleway",sans-serif;
+    font-size: larger;
+    text-align: center;
+
+  }
+  
+  .view-btn {
+    background-color: #05cba7;
+    color: white;
+    border: none;
+    padding: 7.5px 15px;
+    font-size: 1em;
+    font-family: "Raleway",sans-serif;
+    border-radius: 10%;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 27%;
+  }
+  
+  .view-btn:hover {
+    background-color: #056953;
+  }
+  
+  /* Hover effect */
+  .gallery-item:hover img {
+    transform: scale(1.05);
+    filter: blur(2px);
+  }
+  
+  .gallery-item:hover .overlay {
+    opacity: 1;
+  }
+  
+  /* Modal styling for enlarged image view */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover {
+    color: #ccc;
+  }
+  /* Slide-in animation for title */
+@keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .gallery-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Margin to center title above gallery */
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    height: 50px;
+  }
+  
+  .gallery-title h2 {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  .gallery-title h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  background-color: #f0eaea;
+  width: 0; /* Start with no width */
+  animation: slideInUnderline 3s ease-in-out forwards; /* Slide-in animation */
+}
+  
+  /* Caption of Modal Image */
+  @media (max-width: 600px) {
+    .gallery {
+      grid-template-columns: repeat(2, 1fr); /* Display two columns on screens 600px wide or less */
+     
+    }
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Title styling */
+  .gallery-title {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #f7f5f5;
+    animation: slideIn 3s ease-out; /* Slide-in animation on load */
+  }
+  @keyframes slideInUnderline {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  /* Fade-in animation for year labels */
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+/* Slide-up fade-in animation */
+@keyframes slideUpFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start 20px below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Slide up to original position */
+  }
+}
+
+/* Year label styling with slide-up animation */
+.year-label {
+  font-size: 1.8em;
+  
+  font-weight: bold;
+  text-align: center;
+  color: #04be92;
+  opacity: 0; /* Start hidden */
+  animation: slideUpFadeIn 5s forwards; /* Slide up and fade in on load */
+  margin-top: 40px; /* Space above separator line */
+  margin-bottom: 10px;      /* Space below images */
+}
+
+
+/* Separator line styling */
+.separator {
+  border: none;
+  border-top: 1px solid #086c49c0;
+  margin: 30px 0;
+  margin-top: 3rem;
+  
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Ensure no unintended margins or padding cause overflow */
+/* .gallery-container, .gallery, .gallery-item {
+  margin: 0;
+  padding: 0;
+} */
+
+/* Animation containers are hidden to prevent overflow during animations */
+.year-section {
+  overflow: hidden;
+}
+
+/* Featured Works Section */
+.featured-works {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f3f3f3;
+}
+
+.featured-heading {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Grid layout for works */
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Individual work item */
+.work-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.work-image {
+  width: 100%;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.work-item:hover .work-image {
+  transform: scale(1.1); /* Zoom in slightly on hover */
+}
+
+/* Overlay with artwork title */
+.work-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.work-item:hover .work-overlay {
+  opacity: 1;
+}
+
+.work-title {
+  font-size: 1.2em;
+  padding: 10px;
+  text-align: center;
+}
+
+
+
+.dropdown-content {
+  display: none;
+ 
+}
+
+.dropdown-content a {
+  padding: 5px 10px;
+  font-size: 15px;
+  width: 15%; 
+}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown-content a::after{
+  height: 0;
+}
+
+@media (max-width: 600px) {
+.dropdown-content a {
+width: 60%;
+}
+.menu{
+  width: 80%;
+}
+}
+
+  /* View All Button */
+  .button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 20px; /* Add space between the buttons */
+}
+
+.view-all-button {
+    margin-top: 40px;
+    background-color: #028461;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-all-button:hover {
+    background-color: #022e20;
+}
+
+.site-footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'raleway', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-container > div {
+  flex: 1;
+  min-width: 250px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #f4f4f4;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #fcf8f8;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 5px 0;
+}
+
+.footer-links ul li a {
+  color: #bbb;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+  margin-left: 10rem;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+  /* margin-left: 10rem; */
+}
+
+.footer-social .social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 2rem;
+}
+
+.footer-social .social-icons a {
+  color: #bbb;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: color 0.3s;
+  /* text-align: center; */
+  margin-left: 11rem;
+
+}
+
+.footer-social .social-icons a:hover {
+  color: #fff;
+  /* text-align: center; */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid #444;
+  padding-top: 20px;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* justify-content: center; */
+  }
+
+  .footer-container > div {
+    min-width: 100%;
+  }
+  .footer-links ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    margin-left: -1.4rem;
+  }
+}
+/* .fa-brands, .fab {
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    text-align: center;
+} */

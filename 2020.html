@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OdinakachiOkoroaforarts/Gallery</title>
+  <link rel="stylesheet" href="Resources/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="images.css">
+</head>
+<body>
+
+<!-- Hamburger Menu Icon -->
+<div class="hamburger" onclick="toggleMenu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<!-- Navigation Menu -->
+<nav class="menu">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li class="dropdown">
+      <a href="#">Other Works</a>
+      <div class="dropdown-content">
+        <a href="2020.html">2020 <i class="fa-regular fa-calendar-days"></i></a>
+    <a href="2021.html">2021 <i class="fa-regular fa-calendar-days"></i></a>
+    <a href="2022.html">2022 <i class="fa-regular fa-calendar-days"></i></a>
+    <a href="2023.html">2023 <i class="fa-regular fa-calendar-days"></i></a>
+    <a href="2024.html">2024 <i class="fa-regular fa-calendar-days"></i></a>
+    </div>
+    </li>
+     <a href="recent-works.html">Recent Works(2025)<i class="fa-regular fa-calendar-days"></i></a>
+    <li><a href="artistbio.html">About Artist</a></li>
+    <li><a href="press.html">Press & Updates</a></li>
+    <li><a href="contact.html">Contact</a></li>
+
+
+    <!-- <li class="dropdown">
+      <a href="#">Dates</a>
+      <div class="dropdown-content">
+        <a href="#">2020</a>
+        <a href="#">2021</a>
+        <a href="#">2022</a>
+        <a href="#">2023</a>
+        <a href="#">2024</a>
+        <a href="#">2025</a>
+      </div>
+    </li> -->
+  </ul>
+</nav>
+
+</div>
+
+
+    <div class="gallery-title">
+        <h2>My Works</h2>
+      </div>
+      
+     <section class="year-section">
+      <h3 class="year-label">2020 <i class="fa-regular fa-calendar-days"></i></h3>
+      <div class="gallery-container">
+        <div class="gallery">
+          <!-- Each gallery item with a single "View" button -->
+          <div class="gallery-item">
+            <img src="2020/Abused_ 30X 40 inches_ Acrylic and Transfers on Canvas.jpg" alt="This is Image 1" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Abused; 30 X 40 inches; Acrylic and Transfers on Canvas</p>
+              <button class="view-btn" onclick="openModal(0)">View</button>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="2020/BFF_ 54 X 60 inches cm_ mixed media on Canvas.JPG" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">BFF, 54 X 60 inches, mixed media on Canvas</p>
+              <button class="view-btn" onclick="openModal(1)">View</button>
+            </div>
+          </div>
+
+       
+
+          <div class="gallery-item">
+            <img src="2020/Echiche, Screen printing and Acrylic on paper, 32” X 30”, 2020.JPG" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Echiche, Screen printing and Acrylic on paper, 32” X 30”</p>
+              <button class="view-btn" onclick="openModal(2)">View</button>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="2020/Flowery Couch, Screen Printing and Acrylic on Canvas, 51 X 41 inches, 2020.jpg" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Flowery Couch, Screen Printing and Acrylic on Canvas, 51 X 41 inches, 2020</p>
+              <button class="view-btn" onclick="openModal(3)">View</button>
+            </div>
+          </div>
+      
+          <div class="gallery-item">
+            <img src="2020/Green Lace_ 36X 43 inches_ Acrylic on paperpng.jpg" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Green Lace 36X 43 inches Acrylic on paper</p>
+              <button class="view-btn" onclick="openModal(4)">View</button>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="2020/Ijeoma, Screen printing, acrylic and photo transfers on canvas, 32 “ X 24”, 2020.JPG" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Ijeoma, Screen printing, acrylic and photo transfers on canvas, 32 “ X 24”</p>
+              <button class="view-btn" onclick="openModal(5)">View</button>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="2020/Isolation II_ 129.5X114.3_ Acrylic, Linocuts, Photo transfers on canvas.jpg" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Isolation II 129.5X114.3 Acrylic, Linocuts, Photo transfers on canvas</p>
+              <button class="view-btn" onclick="openModal(6)">View</button>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="2020/Isolation_ 139.5X119.4_ Acrylic, Linocuts, Photo transfers on canvas.jpg" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Isolation 139.5X119.4 Acrylic, Linocuts, Photo transfers on canvas</p>
+              <button class="view-btn" onclick="openModal(7)">View</button>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="2020/Portrait of a PIMP_ 30X 40 inches_ Acrylic and Transfers on Canvas.jpg" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Portrait of a PIMP 30X 40 inches Acrylic and Transfers on Canvas</p>
+              <button class="view-btn" onclick="openModal(8)">View</button>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="2020/Red Bra_ 38 X 50 inches _ mixed media on canvas.JPG" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Red Bra 38 X 50 inches mixed media on canvas</p>
+              <button class="view-btn" onclick="openModal(9)">View</button>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="2020/Sidon Dey Look, Acrylic and screen printing on Canvas, 46 X 33, 2020.JPG" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Sidon Dey Look, Acrylic and screen printing on Canvas, 46 X 33</p>
+              <button class="view-btn" onclick="openModal(10)">View</button>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="2020/Untitled, Screen Printing, Acrylic and photo transfers on canvas, 36 X 30 inches, 2020.JPG" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Untitled, Screen Printing, Acrylic and photo transfers on canvas, 36 X 30</p>
+              <button class="view-btn" onclick="openModal(11)">View</button>
+            </div>
+          </div>
+
+          <div class="gallery-item">
+            <img src="2020/Untitled_ 84 x 104 cm_ Acrylic on paper.JPG" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Untitled, 84 x 104 cm Acrylic on paper</p>
+              <button class="view-btn" onclick="openModal(12)">View</button>
+            </div>
+          </div>
+          
+          <div class="gallery-item">
+            <img src="2021/Together, Acrylic on Canvas_ 47X56inches_ 2020 1_result.jpg" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Flowery Couch, 53 X 45 inches, Acrylic on Canvas</p>
+              <button class="view-btn" onclick="openModal(13)">View</button>
+            </div>
+          </div>
+
+
+          <!-- <div class="gallery-item">
+            <img src="2021/Empty Table_ 54X44 inches_ Acrylic and Transfer on Canvas_2020.png" alt="This is Image 2" loading="lazy">
+            <div class="overlay">
+              <p style="font-size: 100%;">Chineto at Thew Beach_64X 57 inches_ Acrylic on Canvas</p>
+              <button class="view-btn" onclick="openModal(14)">View</button>
+            </div>
+          </div> -->
+          <!-- Repeat similar structure for each image, up to 70 images if needed -->
+        </div>
+      </div>
+
+      <!-- <div class="button">
+        <a href="2021.html">
+     <button class="view-all-button">Previous page</button>
+        </a>
+       </div> -->
+       <div class="button">
+        <a href="2021.html">
+            <button class="view-all-button">View 2021 Works >></button>
+        </a>
+    </div>
+    
+
+      
+      <hr class="separator">
+     </section>
+
+     
+<!-- Modal for viewing enlarged images with close functionality -->
+<div class="modal" id="modal">
+  <span class="close" style="font-size: 4rem;" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modal-img">
+  <div id="caption"></div>
+ 
+</div>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-about">
+      <h3>About the Artist</h3>
+      <p>Odinakachi Okoroafor is a contemporary abstract artist creating thought-provoking works that inspire connection and dialogue.</p>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="2020.html">Gallery</a></li>
+        <li><a href="artistbio.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admin.html">Admin Page</a></li>
+      
+      </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-social">
+      <h3>Follow Me</h3>
+      <div class="social-icons">
+        <!-- <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
+        <!-- <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+        <a href ="https://www.instagram.com/odinakachi_okoroafor" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <!-- <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a> -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright Section -->
+  <div class="footer-bottom">
+    <p>&copy; 2024 Odinakachi Okoroafor. All Rights Reserved.</p>
+  </div>
+</footer>
+<script src="images.js"></script>
+
+
+</body>
+</html>

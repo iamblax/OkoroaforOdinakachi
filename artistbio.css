@@ -1,0 +1,433 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'raleway', sans-serif;
+    line-height: 1.6;
+    background-color: #181717;
+    color: #f8f5f5;
+  }
+  
+  /* p{
+    text-align: center;
+  } */
+  /* About Artist Section */
+  .about-artist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 50px 0; */
+    margin-bottom: 3rem;
+  }
+  
+  .container {
+    width: 80%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .artist-portrait img {
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .artist-info {
+    flex: 1;
+    max-width: 650px;
+    text-align: left;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #f8f0f0;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #f7f2f2;
+    margin-bottom: 15px;
+  }
+  
+  .bio, .vision, .exhibitions {
+    font-size: 1.1rem;
+    color: #f9fcfb;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #f5f3f3;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .artist-portrait {
+      margin-bottom: 30px;
+    }
+  
+    .artist-info {
+      /* text-align: center; */
+    }
+  }
+  
+  /* Hamburger Menu Styling */
+.hamburger {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger div {
+  width: 100%;
+  height: 3px;
+  background-color:  #0bdab4;
+  transition: transform 0.3s ease;
+}
+
+/* Hidden Menu */
+.menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+  color: white;
+  z-index: 999;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu li {
+  margin: 20px 0;
+}
+
+.menu a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 300;
+  transition: color 0.3s;
+  font-family: "Raleway",sans-serif;
+}
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Adjusts the underline position slightly below the text */
+  width: 0; /* Start with no width to create slide effect */
+  height: 2px; /* Thickness of the underline */
+  background-color: #f8f1f1; /* Underline color */
+  transition: width 0.3s ease; /* Smooth transition for the slide effect */
+}
+
+/* Hover effect for the underline animation */
+.menu a:hover::after {
+  width: 100%; /* Expand underline to full width on hover */
+}
+
+.menu a:hover {
+  color: #0bdab4; /* Highlight color on hover */
+}
+
+/* Show menu when active */
+.menu.active {
+  display: block;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 600px) {
+  .dropdown-content a {
+  width: 60%;
+  }
+  .menu{
+    width: 80%;
+  }
+  }
+  .site-footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-container > div {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #f4f4f4;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #bbb;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    margin: 5px 0;
+  }
+  
+  .footer-links ul li a {
+    color: #bbb;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+    margin-left: 10rem;
+  }
+  
+  .footer-links ul li a:hover {
+    color: #fff;
+    /* margin-left: 10rem; */
+  }
+  
+  .footer-social .social-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 2rem;
+  }
+  
+  .footer-social .social-icons a {
+    color: #bbb;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+    /* text-align: center; */
+    margin-left: 11rem;
+  
+  }
+  
+  .footer-social .social-icons a:hover {
+    color: #fff;
+    /* text-align: center; */
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #888;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+  }
+  
+  /* Responsive Footer */
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      /* justify-content: center; */
+    }
+  
+    .footer-container > div {
+      min-width: 100%;
+    }
+    .footer-links ul li a {
+      color: #bbb;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s;
+      margin-left: -1.4rem;
+    }
+  }
+  /* .fa-brands, .fab {
+      font-family: "Font Awesome 6 Brands";
+      font-weight: 400;
+      text-align: center;
+  } */
+
+
+  .hero {
+    height: 85vh;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('IMG-20241224-WA0008.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* animation: backgroundZoom 10s ease-in-out infinite alternate; */
+    /* z-index: -1; */
+    
+  }
+  .artist-info{
+    /* text-align: center; */
+    /* justify-content: center;
+    align-items: center; */
+    /* padding: 0; */
+  }
+  /* .text{
+    text-align: center;
+    box-sizing: border-box;
+
+  } */
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    /* text-align: end; */
+    justify-content: center;
+  }
+  
+  /* .section {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  } */
+
+  /* .artists-text{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+  } */
+
+  a {
+    color: #8a8080;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    /* text-align: end; */
+    justify-content: center;
+}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.container {
+    width: 80%;
+    max-width: 1200px;
+    display: flex
+;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* .cta-button {
+  background-color: #149c7d;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; 
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.5s ease;
+  z-index: 1;
+  pointer-events: none; 
+}
+
+.cta-button:hover::after {
+  left: 100%; 
+} */
+
+
+  
+  /* Responsive adjustments for mobile */
+  /* @media (max-width: 768px) {
+    .artist-name {
+      font-size: 4em;
+    }
+    .tagline {
+      font-size: 1.2em;
+    }
+    .cta-button {
+      padding: 12px 25px;
+      font-size: 0.9em;
+    }
+  } */
+
+/* gotten from contact page for an easy button */
+.contact-form button {
+  padding: 15px;
+  font-size: 1.2rem;
+  background-color: #28bda4;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: "Raleway",sans-serif;
+}
+
+.contact-form button:hover {
+  background-color: #086959;
+}

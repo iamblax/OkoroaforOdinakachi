@@ -1,0 +1,427 @@
+/* admin-styles.css */
+body {
+    font-family: "Raleway",sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+header {
+    /* background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), 
+    url(images/Abused;\ 30X\ 40\ inches;\ Acrylic\ and\ Transfers\ on\ Canvas.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+/* Hamburger Menu Styling */
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .hamburger div {
+    width: 100%;
+    height: 3px;
+    background-color:  #0bdab4;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hidden Menu */
+  .menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent overlay */
+    color: white;
+    z-index: 999;
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+  
+  .menu ul {
+    list-style: none;
+  }
+  
+  .menu li {
+    margin: 20px 0;
+  }
+  
+  .menu a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 300;
+    transition: color 0.3s;
+    font-family: "Raleway",sans-serif;
+  }
+  .menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px; /* Adjusts the underline position slightly below the text */
+    width: 0; /* Start with no width to create slide effect */
+    height: 2px; /* Thickness of the underline */
+    background-color: #f8f1f1; /* Underline color */
+    transition: width 0.3s ease; /* Smooth transition for the slide effect */
+  }
+  
+  /* Hover effect for the underline animation */
+  .menu a:hover::after {
+    width: 100%; /* Expand underline to full width on hover */
+  }
+  
+  .menu a:hover {
+    color: #0bdab4; /* Highlight color on hover */
+  }
+  
+  /* Show menu when active */
+  .menu.active {
+    display: block;
+  }
+  
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+  
+  .hamburger.active div:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+header h1 {
+    margin: 0;
+    font-family: "Raleway",sans-serif;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+h2 {
+    margin-top: 20px;
+    color: #444;
+    font-family: "Raleway",sans-serif;
+}
+
+.form-section, .articles-section {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select, textarea, button, span{
+    width: 80%;
+    padding: 10px;
+    margin: 7px 0;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-family: "Raleway",sans-serif;
+}
+
+button {
+    background-color: #0e8f6f;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Raleway",sans-serif;
+}
+
+span{
+    background-color: #db220a;
+    color: #fafafa;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    /* font-size: 30px; */
+    font-family: "Raleway",sans-serif;
+    /* left: 0; */
+    /* padding-bottom: 0; */
+    /* text-shadow: rgb(32, 31, 31); */
+    
+   
+
+}
+
+
+
+
+span:hover{
+    background-color: #156938;
+}
+
+
+button:hover {
+    background-color: #043d2d;
+}
+
+#articlesList {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 30px;
+}
+
+.article-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+}
+
+.article-item h3 {
+    margin: 0;
+}
+
+.article-item p {
+    color: #666;
+}
+
+.article-item button {
+    /* position: absolute; */
+    top: 10px;
+    right: 10px;
+    width: 20%;
+    background-color: #0abd75;
+    padding: 5px 10px;
+    border: none;
+    color: #fff;
+    border-radius: 80px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.article-item button:hover {
+    background-color: #055d4e;
+}
+
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), 
+    url(2020/Abused_\ 30X\ 40\ inches_\ Acrylic\ and\ Transfers\ on\ Canvas.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Overlay styles */
+.overlay {
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; */
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.6)), 
+    url(2022/Zeruwa\ eating\ his\ cake\,\ Acrylic\ and\ Screen\ Printing\ on\ Canvas\,\ 59\ x\ 45\,\ 2022.JPG);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
+    width: 100%;
+}
+
+.overlay-content h2 {
+    margin-bottom: 15px;
+}
+
+.overlay-content input {
+    width: 85%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.overlay-content button {
+    width: 30%;
+    padding: 10px;
+    border: none;
+    background-color:#08ae90 ;
+    color: #fff;
+    font-size: 1em;
+    /* border-radius: 5px; */
+    cursor: pointer;
+}
+
+.overlay-content button:hover {
+    background-color:#014135 ;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    display: none;
+}
+
+/* Main admin panel styles */
+header, main, footer {
+    padding: 20px;
+    text-align: center;
+    display: none; /* Hidden until login */
+}
+/* *{
+    border: 1px solid black;
+} */
+
+
+/*  Restyling preview --Somtee */
+.prev-btns{ 
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+ }
+
+.prev-btns button{
+    display: block;
+    padding: 10px 0;
+    width: 40%;
+    border-radius: 5px;
+
+} 
+
+.prev-btns button:first-child {
+    background-color: #0c8361;
+}
+.prev-btns button:last-child {
+    background-color: #DB220A;
+}
+
+
+.upload-block {
+    margin-top: 30px;
+    border-radius: 6px;
+    position: relative !important;
+    padding: 0 10%;
+    /* display: flex; */
+}
+
+.upload-preview {
+    background-color: #0c8361;
+    border-radius: 7px;
+    padding: 15px 40px;
+    width: 100%;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-preview span {
+    background-color: transparent;
+}
+
+.upload-btn-wrapper {
+    width: 100%;
+}
+
+.check-group {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* --Somtee */
+
+.categoryGroup {
+    display: none;
+  }
+
+/* Loader --somtee */
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 3px dotted #FFF;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+    padding: 0 0 0 0;
+    margin: 0  0 0 0;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+
+  @media (max-width: 600px) {
+    .dropdown-content a {
+    width: 60%;
+    }
+    .menu{
+      width: 70%;
+    }
+  }

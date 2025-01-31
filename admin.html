@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - Manage News</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="admin.css" />
+</head>
+
+<body>
+    <!-- Hamburger Menu Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- Navigation Menu -->
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="press.html">Press & Updates</a></li>
+            <li><a href="recent-works.html">Recent Works</a></li>
+            <!-- <li><a href="contact.html">Contact</a></li> -->
+            
+        </ul>
+    </nav>
+
+    <!-- Login Overlay -->
+    <div id="loginOverlay" class="overlay">
+        <div class="overlay-content">
+            <h2>Admin Login</h2>
+            <form id="loginForm">
+                <input type="password" id="adminPassword" placeholder="Enter password" required />
+                <button type="submit">Login</button>
+            </form>
+            <p id="errorMessage" class="error-message"></p>
+        </div>
+    </div>
+    <header>
+        <h1>Welcome Odinakachi</h1>
+        <p>Manage your gallery images and the news articles for your website.</p>
+    </header>
+
+    <main>
+        <!-- Add/Edit Form -->
+        <section class="form-section">
+            <h2>Add or Edit News</h2>
+            <form id="newsForm">
+                <input type="hidden" id="newsId" value="" />
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="Enter news title..." required />
+                </div>
+                <div class="form-group">
+                    <label for="title">Add Image</label>
+                    <input type="file" name="" id="fileInput" type="image" />
+                </div>
+                <div class="form-group check-group">
+                    <div>
+                        <label for="isNews">News</label>
+                        <input type="checkbox" id="isNews" name="isNews" />
+                    </div>
+
+                    <div>
+                        <label for="isExhibition">Gallery post</label>
+                        <input type="checkbox" id="isExhibition" name="isExhibition" />
+                    </div>
+                </div>
+                <div class="form-group categoryGroup">
+                    <label for="links">links</label>
+                    <input type="link" id="links" placeholder="insert links here..."  /> <!-- Removed required attribute -Somtee -->
+                </div>
+
+                <div class="form-group categoryGroup">
+                    <label for="category">Category</label>
+                    <select id="category" > <!-- Removed required attribute - Somtee -->
+                        <option value="events">Events</option>
+                        <option value="releases">Releases</option>
+                        <option value="features">Media Features</option>
+                    </select>
+                </div>
+                <div class="form-group categoryGroup">
+                    <label for="content">Content</label>
+                    <textarea id="content" placeholder="Enter news content..." rows="4" ></textarea> <!-- Removed required attribute - Somtee -->
+                </div>
+                <button type="submit">Preview</button>
+            </form>
+        </section>
+
+        <!-- Articles List -->
+        <section class="articles-section">
+            <h2>Manage Articles</h2>
+            <div id="articlesList"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Odinakachi Okoroafor. All rights reserved.</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+
+</html>
